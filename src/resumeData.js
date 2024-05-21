@@ -1,9 +1,8 @@
 let resumeData = {
-  imagebaseurl: "https://rbhatia46.github.io/",
+  imagebaseurl: "https://prabhat-codes.github.io/",
   name: "Prabhat Namdharani",
   role: "",
-  linkedinId: "Your LinkedIn Id",
-  skypeid: "Your skypeid",
+  linkedinId: "Prabhat Namdharani",
   roleDescription:
     "A Full stack developer, who likes dabbling in various parts of fullstack development and learning about new technologies, trekking or playing board games.",
   socialLinks: [
