@@ -4,8 +4,14 @@ let resumeData = {
   role: "",
   linkedinId: "Prabhat Namdharani",
   roleDescription:
-    "A Full stack developer, who likes dabbling in various parts of fullstack development and learning about new technologies, trekking or playing board games.",
+    "A Full stack developer, who likes dabbling in various parts of fullstack development and learning about new technologies, trekking and playing board games.",
   socialLinks: [
+    {
+      name: "cv",
+      url:
+        "https://drive.google.com/file/d/1Z9n5_UsPnXyaaJb3zDRF3-0vRIJ18902/view?usp=sharing",
+      className: "fa fa-light fa-file",
+    },
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/prabhat-namdharani/",

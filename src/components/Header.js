@@ -48,13 +48,14 @@ export default class Header extends Component {
 
           <div className="row banner">
             <div className="banner-text">
-              <h1 className="responsive-headline">This is {resumeData.name}.</h1>
+              <h1 className="responsive-headline">
+                Hi,<br /> This is {resumeData.name}.
+              </h1>
               <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
-               {resumeData.roleDescription}
-                <small>
-                  <br />
+                {resumeData.roleDescription}
+                <p style={{ fontSize: "14px", color: "lightgray" }}>
                   P.S This is my picture from the Kedarkantha Trek (Dec 2023)
-                </small>
+                </p>
               </h3>
               <hr />
               <ul className="social">
