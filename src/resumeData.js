@@ -68,6 +68,15 @@ let resumeData = {
     },
     {
       srNo: 2,
+      Date: "Oct 2023 – Present",
+      Position: "Freelance Engineer",
+      Location: "Ritesh Rathi and Associates",
+      Responsibilities:
+        "Automated workflows and enhanced operational efficiency across multiple projects using Google Apps Script & Sheets, like attendance systems, payroll tracking, review systems.",
+      Keywords: ["Google Suite", "Appscripts"],
+    },
+    {
+      srNo: 3,
       Date: "Jan – July 2023",
       Position: "Software Development Intern",
       Location: "Wells Fargo",
@@ -76,7 +85,7 @@ let resumeData = {
       Keywords: ["React.js", "Spring Boot", "MS Office"],
     },
     {
-      srNo: 3,
+      srNo: 4,
       Date: "Jun – Aug 2022",
       Position: "Software Developer Intern(Summer)",
       Location: "Wells Fargo",
@@ -85,7 +94,7 @@ let resumeData = {
       Keywords: ["Python", "Django", "React.JS"],
     },
     {
-      srNo: 4,
+      srNo: 5,
       Date: "Jun 2021 – Aug 2021",
       Position: "Software Development Intern",
       Location: "NetLab India",
@@ -94,7 +103,7 @@ let resumeData = {
       Keywords: ["Pandas", "Python", "REST API"],
     },
     {
-      srNo: 5,
+      srNo: 6,
       Date: "Jun 2021 - Aug 2021",
       Position: "Feedback Software Developer",
       Location: "University Of Ibague, Columbia",
@@ -109,26 +118,21 @@ let resumeData = {
 
   technicalSkills: [
     { name: "HTML5", level: "Experienced" },
-    { name: "DS", level: "Intermediate" },
     { name: "JS", level: "Intermediate" },
-    { name: "CSS", level: "Intermediate" },
+    { name: "Python", level: "Intermediate" },
+    { name: "ReactJS", level: "Advanced" },
+    { name: "Java", level: "Intermediate" },
     { name: "ML", level: "Beginner" },
     { name: "OpenCV", level: "Beginner" },
     { name: "Google Appscript", level: "Intermediate" },
     { name: "Pandas", level: "Experienced" },
-    { name: "C++", level: "Intermediate" },
-    { name: "C", level: "Intermediate" },
-    { name: "Python", level: "Intermediate" },
   ],
 
   nonTechnicalSkills: [
-    { name: "Leadership", level: "Experienced" },
     { name: "Canva", level: "Experienced" },
-    { name: "Editing", level: "Experienced" },
     { name: "Writing", level: "Experienced" },
     { name: "MS Office", level: "Experienced" },
     { name: "Figma", level: "Intermediate" },
-    { name: "Adobe Illustrator", level: "Beginner" },
     { name: "Google Suite", level: "Experienced" },
   ],
 
