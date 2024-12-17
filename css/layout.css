@@ -151,8 +151,6 @@ header .scrolldown a:hover {
   position: fixed;
   left: 0;
   top: 0;
-  /* backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 10px rgba(227,227,247,0.37); */
 }
 .opaque {
   background-color: #333;
@@ -686,9 +684,10 @@ ul#nav li.current a {
 
   background: url(../images/overlay-bg.png) repeat;
 }
-
 .portfolio-item .item-wrap img {
   vertical-align: bottom;
+  height: 250px;
+  width: 250px;
 }
 .portfolio-item .portfolio-item-meta {
   padding: 18px;
