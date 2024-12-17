@@ -684,9 +684,10 @@ ul#nav li.current a {
 
   background: url(../images/overlay-bg.png) repeat;
 }
-
 .portfolio-item .item-wrap img {
   vertical-align: bottom;
+  height: 250px;
+  width: 250px;
 }
 .portfolio-item .portfolio-item-meta {
   padding: 18px;
