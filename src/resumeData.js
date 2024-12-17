@@ -23,13 +23,12 @@ let resumeData = {
     },
   ],
   aboutme: `
-  As a budding software developer at Wells Fargo, 
-  I have experience in ReactJS along with managerial skills, 
-  Python, and SpringBoot. 
-  Eager to advance my proficiency in software development, 
-  I also maintain a keen interest in exploring management opportunities. 
+  As a budding software developer in the industry, 
+  I have experience in ReactJS , Python, and SpringBoot. 
+  I am eager to advance my proficiency in software development, 
+  while also maintaining a keen interest in exploring management opportunities. 
   Beyond the professional sphere, 
-  I enjoy cricket matches, enriching my life with diverse experiences. Find below my professional journey!
+  I enjoy cricket matches, trekking, and socializing. Find below my professional journey!
   `,
   address: "India",
   education: [
@@ -61,7 +60,7 @@ let resumeData = {
       srNo: 1,
       Date: "Aug 2023 – Present",
       Position: "Software Developer",
-      Location: "Wells Fargo",
+      Company: "Wells Fargo",
       Responsibilities:
         "Transformed contact center operations using ReactJS interfaces, reduced manual work by 20%, worked on CI/CD integration, cutting deployment time by 15%, and strengthened security with vulnerability management leveraging Spring Boot.",
       Keywords: ["ReactJS", "CI/CD", "Spring Boot"],
@@ -70,7 +69,7 @@ let resumeData = {
       srNo: 2,
       Date: "Oct 2023 – Present",
       Position: "Freelance Engineer",
-      Location: "Ritesh Rathi and Associates",
+      Company: "Ritesh Rathi and Associates",
       Responsibilities:
         "Automated workflows and enhanced operational efficiency across multiple projects using Google Apps Script & Sheets, like attendance systems, payroll tracking, review systems.",
       Keywords: ["Google Suite", "Appscripts"],
@@ -79,7 +78,7 @@ let resumeData = {
       srNo: 3,
       Date: "Jan – July 2023",
       Position: "Software Development Intern",
-      Location: "Wells Fargo",
+      Company: "Wells Fargo",
       Responsibilities:
         "Orchestrated frontend development for a vital tool, automating document review assignments, used React.js to craft an intuitive interface resulting in a 10% boost in team productivity, and adapted seamlessly to company protocols, delivering a solution aligned with organizational standards.",
       Keywords: ["React.js", "Spring Boot", "MS Office"],
@@ -88,7 +87,7 @@ let resumeData = {
       srNo: 4,
       Date: "Jun – Aug 2022",
       Position: "Software Developer Intern(Summer)",
-      Location: "Wells Fargo",
+      Company: "Wells Fargo",
       Responsibilities:
         "Collaborated on vulnerability and bug management, streamlining task assignment and enhancing team communication, developed an automated vulnerability and bug management system using Python, Celery, and Django, and developed frontend using ReactJs, enhancing usability.",
       Keywords: ["Python", "Django", "React.JS"],
@@ -97,7 +96,7 @@ let resumeData = {
       srNo: 5,
       Date: "Jun 2021 – Aug 2021",
       Position: "Software Development Intern",
-      Location: "NetLab India",
+      Company: "NetLab India",
       Responsibilities:
         "Spearheaded the development of the backend for an organizational portal, tailored to meet specific needs, leveraging Pandas and Python, resulting in a 20% increase in data processing efficiency, engineered functionality to seamlessly process user-provided Excel files and generate Excel sheets meeting organizational requirements.",
       Keywords: ["Pandas", "Python", "REST API"],
@@ -106,7 +105,7 @@ let resumeData = {
       srNo: 6,
       Date: "Jun 2021 - Aug 2021",
       Position: "Feedback Software Developer",
-      Location: "University Of Ibague, Columbia",
+      Company: "University Of Ibague, Columbia",
       Responsibilities:
         "Conducted research and data gathering processes, facilitating informed decision-making, resulting in a 30% increase in data accuracy, implemented smart feedback systems to streamline data collection processes, enhancing efficiency by 25%.",
       Keywords: ["Research", "Appscript", "Google Suite"],
@@ -150,11 +149,11 @@ let resumeData = {
       link: "https://github.com/Prabhat-codes/blogpost",
     },
     {
-      name: "AZ-900",
-      description: "Azure certification for working with cloud.",
-      imgurl: "images/portfolio/azure.png",
-      link:
-        "https://drive.google.com/file/d/1IKJ2xmAiihgz5xaedRzz1DgLqU-DnQLL/view",
+      name: "Super Mario CV",
+      description:
+        "Made a interactable super mario CV for a friend in the marketing sector.",
+      imgurl: "images/portfolio/mario.png",
+      link: "https://prabhat-codes.github.io/anjali-cv/",
     },
     {
       name: "Mock bakery website",
