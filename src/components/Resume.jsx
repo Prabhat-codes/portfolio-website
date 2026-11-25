@@ -1,35 +1,23 @@
-import React, { Component } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import WorkIcon from "@material-ui/icons/Work";
-import StarIcon from "@material-ui/icons/Star";
-import AdbIconOutlined from "@material-ui/icons/AdbOutlined";
-import BeenhereIcon from "@material-ui/icons/Beenhere";
+import { MdBeenhere, MdOutlineAdb, MdStar, MdWork } from "react-icons/md";
 
-export default class Resume extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
-    const workData = this.props.resumeData["work"];
-    const experienceOrder = { Experienced: 1, Intermediate: 2, Beginner: 3 };
-    let nonTechnicalSkills = this.props.resumeData["nonTechnicalSkills"];
-    let technicalSkills = this.props.resumeData["technicalSkills"];
-    technicalSkills.sort(
-      (a, b) => experienceOrder[a.level] - experienceOrder[b.level]
-    );
-    nonTechnicalSkills.sort(
-      (a, b) => experienceOrder[a.level] - experienceOrder[b.level]
-    );
+const LEVEL_ORDER = { Advanced: 0, Experienced: 1, Intermediate: 2, Beginner: 3 };
+const byLevel = (skills) =>
+  [...skills].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
+
+export default function Resume({ resumeData }) {
+    const workData = resumeData.work;
+    const technicalSkills = byLevel(resumeData.technicalSkills);
+    const nonTechnicalSkills = byLevel(resumeData.nonTechnicalSkills);
     const renderSkillArticles = (skills) =>
       skills.map((skill, index) => (
         <article key={index} className="experience_details">
           {skill.icon}
           <h4>{skill.name}</h4>
-          {/* <p className={`text-light ${skill.level.toLowerCase()}`}>
-            {skill.level}
-          </p> */}
         </article>
       ));
     return (
@@ -61,7 +49,7 @@ export default class Resume extends Component {
                   }),
                 }}
                 iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={<WorkIcon />}
+                icon={<MdWork />}
               >
                 <div>
                   {resume.Keywords.map((keyword, j) => (
@@ -91,7 +79,7 @@ export default class Resume extends Component {
 
             <VerticalTimelineElement
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-              icon={<StarIcon />}
+              icon={<MdStar />}
             />
           </VerticalTimeline>
         </div>
@@ -134,8 +122,6 @@ export default class Resume extends Component {
               <span>Skills</span>
             </h1>
           </div>
-
-          {/* <p>{resumeData.skillsDescription}</p> */}
           <section id="experience">
             <div className="container experience__container">
               <div className="experience__card">
@@ -145,7 +131,7 @@ export default class Resume extends Component {
                     technicalSkills.map((skill) => ({
                       name: skill.name,
                       level: skill.level,
-                      icon: <AdbIconOutlined className="experience__icons" />,
+                      icon: <MdOutlineAdb className="experience__icons" />,
                     }))
                   )}
                 </div>
@@ -157,30 +143,14 @@ export default class Resume extends Component {
                     nonTechnicalSkills.map((skill) => ({
                       name: skill.name,
                       level: skill.level,
-                      icon: <BeenhereIcon className="experience__icons" />,
+                      icon: <MdBeenhere className="experience__icons" />,
                     }))
                   )}
                 </div>
               </div>
             </div>
           </section>
-          {/* <div className="bars">
-              <ul className="skills">
-                {resumeData.skills &&
-                  resumeData.skills.map((item) => {
-                    return (
-                      <li key={item.skillname}>
-                        <span
-                          className={`bar-expand ${item.skillname.toLowerCase()}`}
-                        />
-                        <em>{item.skillname}</em>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div> */}
         </div>
       </section>
     );
-  }
 }

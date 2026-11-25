@@ -146,7 +146,6 @@ let resumeData = {
       name: "Sudoku Solver",
       description: "Using OpenCV and Python, solve a sudoku puzzle",
       imgurl: "images/portfolio/sudoku.png",
-      link: "https://github.com/Prabhat-codes/Sudoku_solver",
     },
     {
       name: "BlogPost",

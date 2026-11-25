@@ -1,3 +1,9 @@
+/* Loaded after the stylesheets in public/css, so these rules win. */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,11 +11,108 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* The opening screen fills the window, and the headline scales with it. */
+header#home {
+  height: 100vh;
+  height: 100svh;
+}
+
+header#home .banner-text h1.responsive-headline {
+  font-size: clamp(40px, 8.5vw, 90px);
+}
+
+header#home .banner-text .photo-note {
+  font-size: 14px;
+  color: lightgray;
+}
+
+/* The menu hides while you scroll past the opening screen (wide screens only). */
+#nav-wrap {
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+@media (min-width: 769px) {
+  #nav-wrap.nav-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#about p {
+  color: #c9c9c9;
+}
+
+.experience__icons {
+  font-size: 15px;
+}
+
+/* Testimonial slider */
+.flexslider .slides > li.active {
+  display: block;
+  animation: slide-in 0.6s ease;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+.flex-control-paging li button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.flex-control-paging li button:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.flex-control-paging li button.flex-active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact form: undo the old page-wide input styles inside the side panel. */
+.ant-drawer input.ant-input,
+.ant-drawer textarea.ant-input {
+  min-width: 0;
+  margin: 0;
+  padding: 10px 12px;
+  color: rgba(0, 0, 0, 0.88);
+  background: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.ant-drawer textarea.ant-input {
+  min-height: 110px;
+}
+
+.ant-drawer input.ant-input:focus,
+.ant-drawer textarea.ant-input:focus {
+  color: rgba(0, 0, 0, 0.88);
+  background: #fff;
+  border-color: #1677ff;
+}
+
+.ant-drawer .ant-form-item-has-error input.ant-input {
+  border-color: #ff4d4f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .flexslider .slides > li.active {
+    animation: none;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { Button, Form, Input, notification } from "antd";
 
 const CustomGoogleForms = ({ setOpen }) => {
@@ -23,18 +23,21 @@ const CustomGoogleForms = ({ setOpen }) => {
             mode: "no-cors",
           }
         );
+        // Google does not let the page read its reply, so delivery cannot be confirmed.
         api.success({
-          message: "Submitted successfully",
+          message: "Message sent",
+          description: "If you don't hear back, email me at prabhat.namdharani@gmail.com.",
         });
         form.resetFields();
         setOpen(false);
-      } catch (e) {
+      } catch {
         api.error({
-          message: e.message,
+          message: "Could not send your message",
+          description: "Check your connection, or email me at prabhat.namdharani@gmail.com.",
         });
       }
     },
-    [api, form]
+    [api, form, setOpen]
   );
 
   return (
@@ -57,9 +60,12 @@ const CustomGoogleForms = ({ setOpen }) => {
         <Form.Item
           name="email"
           label="Email"
-          rules={[{ required: true, message: "Email address is required" }]}
+          rules={[
+            { required: true, message: "Email address is required" },
+            { type: "email", message: "Please enter a valid email address" },
+          ]}
         >
-          <Input />
+          <Input inputMode="email" autoComplete="email" />
         </Form.Item>
 
         <Form.Item
@@ -79,9 +85,8 @@ const CustomGoogleForms = ({ setOpen }) => {
         <Form.Item
           name="query"
           label="Query or Feedback"
-          // rules={[{ required: true, message: "Email address is required" }]}
         >
-          <Input />
+          <Input.TextArea rows={4} />
         </Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
