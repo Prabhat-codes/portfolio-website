@@ -6,7 +6,7 @@ My personal portfolio website. It is for recruiters, collaborators and anyone wh
 
 **Tech stack:** React, Vite, Ant Design, react-vertical-timeline-component and plain CSS. Tests use Vitest and Testing Library.
 
-**Live site:** https://prabhat-codes.github.io/portfolio-website/
+**Live site:** https://prabhat-portfolio-ruby.vercel.app (also at https://prabhat-codes.github.io/portfolio-website/)
 
 ## Run
 
